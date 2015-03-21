@@ -10,7 +10,11 @@
                    			obj.css("color", '#C0C0C0');
 	};
 
-	$(document).ready(function () 
+    function highlight(obj) {obj.css("background-color", "white");
+    };
+
+
+	$(document).ready(function ()
 						{
 							$('.contentrow').css("color", "black");
 							$('.label_OF').css("background-color", "#746EBC");
@@ -21,11 +25,16 @@
 							$('.label_SS').css("background-color", "#BB984A");
 							$('.label_SP').css("background-color", "#71B681");
 							$('.label_RP').css("background-color", "#C353A8");
-							$('.contentrow').click(function () { 
+                            $('.repeat_col_header').hide();
+							$('.contentrow').click(function () {
                                                                 fadeout($(this));
                                                                 $(this).click( function () {$(this).hide();});
-													           });
-						}	    
+                                                            });
+                            $('.contentrow').mouseenter(function () {
+                                                highlight($(this));
+                                            });
+
+						}
 					 );
 
 </script>
